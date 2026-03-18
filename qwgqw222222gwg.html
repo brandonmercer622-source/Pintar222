@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koin Langka Surabaya - Harta Karun Sejarah</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: #1a1a1a; 
+            color: #f0f0f0; 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .header {
+            background: linear-gradient(180deg, #2c1810 0%, #1a1a1a 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 8px solid #D4AF37;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-weight: bold;
+        }
+        .header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .coins-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .coin-frame {
+            background: linear-gradient(145deg, #333 0%, #222 100%);
+            border: 6px solid #D4AF37;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(212,175,55,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .coin-frame:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(212,175,55,0.5);
+        }
+        .coin-frame-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #D4AF37;
+            margin-bottom: 1rem;
+            background: radial-gradient(circle, #D4AF37, #B8860B);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 1rem;
+        }
+        .coin-frame h3 {
+            color: #D4AF37;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .coin-frame p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+        .services {
+            padding: 4rem 2rem;
+            background: rgba(255,255,255,0.03);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-item {
+            text-align: center;
+            padding: 2rem;
+            border: 3px solid transparent;
+            border-radius: 15px;
+            transition: all 0.3s;
+            background: linear-gradient(145deg, #333 0%, #2a2a2a 100%);
+        }
+        .service-item:hover {
+            border-color: #D4AF37;
+            background: linear-gradient(145deg, #D4AF37 0%, #B8860B 100%);
+            color: #1a1a1a;
+            transform: translateY(-5px);
+        }
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .service-item h3 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .owner-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, #1a1a1a 0%, #2c1810 100%);
+            border-top: 5px solid #D4AF37;
+            border-bottom: 5px solid #D4AF37;
+        }
+        .owner-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid #D4AF37;
+            margin: 0 auto 2rem;
+            background: linear-gradient(145deg, #D4AF37, #B8860B);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            box-shadow: 0 20px 60px rgba(212,175,55,0.4);
+        }
+        .owner-name {
+            font-size: 2rem;
+            color: #D4AF37;
+            margin-bottom: 1rem;
+        }
+        .contact-bar {
+            background: #D4AF37;
+            color: #1a1a1a;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+            transition: all 0.3s;
+        }
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37,211,102,0.6);
+        }
+        footer {
+            background: #111;
+            color: #999;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .coins-showcase, .services { grid-template-columns: 1fr; padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Koin Langka Surabaya</h1>
+        <p>Harta Karun Sejarah & Penelusuran Harta Karun</p>
+    </header>
+
+    <section class="coins-showcase">
+        <div class="coin-frame">
+            <div class="coin-frame-img">🪙</div>
+            <h3>Gulden Wayang</h3>
+            <p>Edisi De Javasche Bank. Harga tinggi, siap tampung jika cocok.</p>
+        </div>
+        <div class="coin-frame">
+            <div class="coin-frame-img">⚓</div>
+            <h3>Gulden Coen</h3>
+            <p>Bergambar JP Coen, kisaran harga hingga jutaan. Siap beli sesuai kondisi.</p>
+        </div>
+        <div class="coin-frame">
+            <div class="coin-frame-img">👑</div>
+            <h3>Menerima Berbagai Jenis</h3>
+            <p>Majapahit, Kesultanan, Republik awal, siap beli dan tampung.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="service-item">
+            <span class="service-icon">🔍</span>
+            <h3>Identifikasi</h3>
+            <p>Verifikasi koin Anda secara profesional</p>
+        </div>
+        <div class="service-item">
+            <span class="service-icon">💰</span>
+            <h3>Jual Beli</h3>
+            <p>Transaksi aman harga terbaik</p>
+        </div>
+        <div class="service-item">
+            <span class="service-icon">✅</span>
+            <h3>Cek Keaslian</h3>
+            <p>Garansi 100% asli</p>
+        </div>
+    </section>
+
+    <section class="owner-section">
+        <div class="owner-photo">👨‍💼</div>
+        <h2 class="owner-name">John Kenrick</h2>
+        <p>Owner Numismatik Surabaya</p>
+    </section>
+
+    <section class="contact-bar">
+        <h2>Kontak Sekarang</h2>
+        <p>WhatsApp: 089521320957</p>
+        <a href="https://wa.me/6289521320957?text=Saya%20minat%20koin%20langka" class="whatsapp-btn">Hubungi John</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Koin Langka Surabaya. John Kenrick - Harta Karun Sejarah</p>
+    </footer>
+</body>
+</html>
